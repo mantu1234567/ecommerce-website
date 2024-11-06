@@ -7,7 +7,7 @@ const BagItems = () => {
     // Function to fetch bag items
     const fetchBagItems = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/get/bags'); // Adjust the URL as needed
+        const response = await axios.get('https://ecommerce-backend-ozlc.onrender.com/api/get/bags'); // Adjust the URL as needed
         setBagItems(response.data);
       } catch (error) {
         console.error('Error fetching bag items:', error);
@@ -17,7 +17,7 @@ const BagItems = () => {
     // Function to delete a bag item
     const deleteBagItem = async (id) => {
       try {
-        await axios.delete(`http://localhost:3000/api/bag/${id}`);
+        await axios.delete(`https://ecommerce-backend-ozlc.onrender.com/api/bag/${id}`);
         fetchBagItems(); // Refresh data after deletion
       } catch (error) {
         console.error('Error deleting bag item:', error);

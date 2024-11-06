@@ -3,7 +3,7 @@ import axios from 'axios'; // Install axios in your frontend project
 const ProductCard = ({ product }) => {
   const handleCardItem = async (item) => {
     try {
-      const response = await axios.post('http://localhost:3000/api/add/bag', item);
+      const response = await axios.post('https://ecommerce-backend-ozlc.onrender.com/api/add/bag', item);
       console.log('Product saved:', response.data);
     } catch (error) {
       console.error('Error saving product:', error);

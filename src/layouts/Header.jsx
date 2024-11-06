@@ -13,7 +13,7 @@ const Navbar = () => {
   // Function to fetch bag items
   const fetchBagItems = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/get/bags"); // Adjust the URL as needed
+      const response = await axios.get("https://ecommerce-backend-ozlc.onrender.com/api/get/bags"); // Adjust the URL as needed
       setBagItems(response.data);
     } catch (error) {
       console.error("Error fetching bag items:", error);
